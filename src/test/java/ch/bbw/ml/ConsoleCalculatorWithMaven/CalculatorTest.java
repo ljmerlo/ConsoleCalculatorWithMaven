@@ -24,4 +24,10 @@ public class CalculatorTest {
 		testee = new Calculator();
 		assertTrue(testee.subtraction(10, 25) == -15);
 	}
+	
+	@Test
+	public void testQuotientZweiPositiveIsOk() {
+		testee = new Calculator();
+		assertTrue(testee.division(30, 10) == 3);
+	}
 }
