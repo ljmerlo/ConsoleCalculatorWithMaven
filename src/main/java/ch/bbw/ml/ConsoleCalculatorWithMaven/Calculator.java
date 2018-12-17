@@ -11,8 +11,8 @@ public class Calculator {
     {
         return summand1 + summand2;
     }
-    public int subtraktion(int minuend, int subtrahend)
+    public int subtraction(int minuend, int subtrahend)
     {
-    	return 0;
+    	return minuend - subtrahend;
     }
 }
