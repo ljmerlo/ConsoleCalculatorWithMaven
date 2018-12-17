@@ -135,4 +135,9 @@ public class CalculatorTest {
 	public void testQuotientMaxDivByPosIsOk() {
 		assertTrue(testee.division(Integer.MAX_VALUE, 12) == 178956970);
 	}
+	
+	@Test(expected=NumberFormatException.class)
+	public void testQuotientMaxDivByStringIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 178956970);
+	}
 }
