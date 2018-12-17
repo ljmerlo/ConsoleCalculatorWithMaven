@@ -18,9 +18,10 @@ public class App
         System.out.println("==================");
         System.out.println();
 
-        valueA = 10;
-        valueB = 20;
+        valueA = 50;
+        valueB = 10;
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.addition(valueA, valueB));
         System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraction(valueA, valueB));
+        System.out.println("Quotient " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
     }
 }
