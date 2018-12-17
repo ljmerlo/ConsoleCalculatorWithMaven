@@ -15,7 +15,7 @@ public class Calculator {
     {
     	return minuend - subtrahend;
     }
-    public int division(int dividend, int divisor)
+    int division(int dividend, int divisor)
     {
     	return dividend / divisor;
     }

@@ -110,4 +110,39 @@ public class CalculatorTest {
 	public void testQuotientZweiPositiveIsOk() {
 		assertTrue(testee.division(30, 10) == 3);
 	}
+	
+	@Test
+	public void testQuotientZweiNegativeIsOk() {
+		assertTrue(testee.division((-30), (-10)) == 3);
+	}
+
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testQuotientPosDivByZeroIsOk() {
+		assertTrue(testee.division(30, 0) == 0);
+	}
+	
+	@Test
+	public void testQuotientZeroDivByPosIsOk() {
+		assertTrue(testee.division(0, 30) == 0);
+	}
+	
+	@Test
+	public void testQuotientMaxDivByMinIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	
+	@Test
+	public void testQuotientMaxDivByPosIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, 12) == 178956970);
+	}
+	
+	@Test(expected=NumberFormatException.class)
+	public void testQuotientMaxDivByStringIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 178956970);
+	}
+	
+	@Test
+	public void testQuotientPosByPosWithRoundingIsOk() {
+		assertTrue(testee.division(1, 2) == 0);
+	}
 }
