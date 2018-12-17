@@ -89,6 +89,11 @@ public class CalculatorTest {
 		assertTrue(testee.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == (-1));
 	}
 	
+	@Test
+	public void testDifferenzMaxMinusMinusMinIsOk() {
+		assertTrue(testee.subtraction(Integer.MAX_VALUE, (-Integer.MIN_VALUE)) == (-1));
+	}
+	
 	//Division
 	
 	@Test
