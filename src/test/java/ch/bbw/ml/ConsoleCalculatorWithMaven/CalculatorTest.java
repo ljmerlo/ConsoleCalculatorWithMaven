@@ -37,6 +37,11 @@ public class CalculatorTest {
 		assertTrue(testee.addition(20, (-10)) == 10);
 	}
 	
+	@Test
+	public void testSummeOneNegOnePosIsOk() {
+		assertTrue(testee.addition((-10), 20) == 10);
+	}
+	
 	//Subtraction
 	
 	@Test
