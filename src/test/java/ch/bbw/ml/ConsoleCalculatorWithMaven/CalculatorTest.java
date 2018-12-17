@@ -19,6 +19,8 @@ public class CalculatorTest {
 	public void setUp() {
 		testee = new Calculator();
 	}
+	
+	//Addition
 
 	@Test
 	public void testSummeZweiPositiveIsOk() {
@@ -31,9 +33,18 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testSummeOnePosOneNegIsOk() {
+		assertTrue(testee.addition(20, (-10)) == 10);
+	}
+	
+	//Subtraction
+	
+	@Test
 	public void testDifferenzZweiPositiveIsOk() {
 		assertTrue(testee.subtraction(10, 25) == -15);
 	}
+	
+	//Division
 	
 	@Test
 	public void testQuotientZweiPositiveIsOk() {
