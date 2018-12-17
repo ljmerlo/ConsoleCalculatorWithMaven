@@ -110,4 +110,9 @@ public class CalculatorTest {
 	public void testQuotientZweiPositiveIsOk() {
 		assertTrue(testee.division(30, 10) == 3);
 	}
+	
+	@Test
+	public void testQuotientZweiNegativeIsOk() {
+		assertTrue(testee.division((-30), (-10)) == 3);
+	}
 }
