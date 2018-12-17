@@ -117,7 +117,12 @@ public class CalculatorTest {
 	}
 
 	@Test(expected=java.lang.ArithmeticException.class)
-	public void testQuotientPosDevByZeroIsOk() {
+	public void testQuotientPosDivByZeroIsOk() {
 		assertTrue(testee.division(30, 0) == 0);
+	}
+	
+	@Test
+	public void testQuotientZeroDivByPosIsOk() {
+		assertTrue(testee.division(0, 30) == 0);
 	}
 }
