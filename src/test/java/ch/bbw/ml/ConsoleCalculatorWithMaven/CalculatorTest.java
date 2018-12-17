@@ -140,4 +140,9 @@ public class CalculatorTest {
 	public void testQuotientMaxDivByStringIsOk() {
 		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 178956970);
 	}
+	
+	@Test
+	public void testQuotientPosByPosWithRoundingIsOk() {
+		assertTrue(testee.division(1, 2) == 0);
+	}
 }
