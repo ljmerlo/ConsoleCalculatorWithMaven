@@ -42,6 +42,11 @@ public class CalculatorTest {
 		assertTrue(testee.addition((-10), 20) == 10);
 	}
 	
+	@Test
+	public void testSummeMaxPlusOneIsOk() {
+		assertTrue(testee.addition(Integer.MAX_VALUE, 1) == Integer.MIN_VALUE);
+	}
+	
 	//Subtraction
 	
 	@Test
