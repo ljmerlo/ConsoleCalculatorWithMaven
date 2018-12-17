@@ -7,8 +7,12 @@ package ch.bbw.ml.ConsoleCalculatorWithMaven;
  */
 
 public class Calculator {
-    public int summe(int summand1, int summand2)
+    public int addition(int summand1, int summand2)
     {
         return summand1 + summand2;
+    }
+    public int subtraktion(int minuend, int subtrahend)
+    {
+    	return 0;
     }
 }
