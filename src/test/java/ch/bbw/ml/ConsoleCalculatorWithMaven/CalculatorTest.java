@@ -52,6 +52,11 @@ public class CalculatorTest {
 		assertTrue(testee.addition(Integer.MIN_VALUE, (-1)) == Integer.MAX_VALUE);
 	}
 	
+	@Test
+	public void testSummeMaxMinusMin() {
+		assertTrue(testee.addition(Integer.MAX_VALUE, Integer.MIN_VALUE) == (-1));
+	}
+	
 	//Subtraction
 	
 	@Test
