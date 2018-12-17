@@ -74,6 +74,11 @@ public class CalculatorTest {
 		assertTrue(testee.subtraction((-10), (-10)) == 0);
 	}
 	
+	@Test
+	public void testDifferenzOnePosOneNegIsOk() {
+		assertTrue(testee.subtraction(10, (-10)) == 20);
+	}
+	
 	//Division
 	
 	@Test
