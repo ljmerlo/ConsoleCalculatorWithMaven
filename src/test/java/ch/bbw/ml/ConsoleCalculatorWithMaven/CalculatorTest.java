@@ -115,4 +115,9 @@ public class CalculatorTest {
 	public void testQuotientZweiNegativeIsOk() {
 		assertTrue(testee.division((-30), (-10)) == 3);
 	}
+
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testQuotientPosDevByZeroIsOk() {
+		assertTrue(testee.division(30, 0) == 0);
+	}
 }
