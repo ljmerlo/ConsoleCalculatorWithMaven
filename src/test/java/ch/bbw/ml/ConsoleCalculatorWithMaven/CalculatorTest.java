@@ -125,4 +125,9 @@ public class CalculatorTest {
 	public void testQuotientZeroDivByPosIsOk() {
 		assertTrue(testee.division(0, 30) == 0);
 	}
+	
+	@Test
+	public void testQuotientMaxDivByMinIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
+	}
 }
