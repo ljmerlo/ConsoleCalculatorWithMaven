@@ -69,6 +69,41 @@ public class CalculatorTest {
 		assertTrue(testee.subtraction(10, 25) == -15);
 	}
 	
+	@Test
+	public void testDifferenzZweiNegativeIsOk() {
+		assertTrue(testee.subtraction((-10), (-10)) == 0);
+	}
+	
+	@Test
+	public void testDifferenzOnePosOneNegIsOk() {
+		assertTrue(testee.subtraction(10, (-10)) == 20);
+	}
+	
+	@Test
+	public void testDifferenzOneNegOnePosIsOk() {
+		assertTrue(testee.subtraction((-10), 10) == (-20));
+	}
+	
+	@Test
+	public void testDifferenzMaxMinusMinIsOk() {
+		assertTrue(testee.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == (-1));
+	}
+	
+	@Test
+	public void testDifferenzMaxMinusMinusMinIsOk() {
+		assertTrue(testee.subtraction(Integer.MAX_VALUE, (-Integer.MIN_VALUE)) == (-1));
+	}
+	
+	@Test
+	public void testDifferenzMinMinusMaxIsOk() {
+		assertTrue(testee.subtraction(Integer.MIN_VALUE, (-Integer.MAX_VALUE)) == (-1));
+	}
+	
+	@Test
+	public void testDifferenzNegMinMinusMaxIsOk() {
+		assertTrue(testee.subtraction((-Integer.MIN_VALUE), Integer.MAX_VALUE) == (1));
+	}
+	
 	//Division
 	
 	@Test
