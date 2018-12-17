@@ -130,4 +130,9 @@ public class CalculatorTest {
 	public void testQuotientMaxDivByMinIsOk() {
 		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
+	
+	@Test
+	public void testQuotientMaxDivByPosIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, 12) == 178956970);
+	}
 }
