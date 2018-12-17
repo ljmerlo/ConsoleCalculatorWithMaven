@@ -21,8 +21,13 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testSummeZeiPositiveIsOk() {
+	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.addition(10, 25) == 35);
+	}
+	
+	@Test
+	public void testSummeZweiNegativeIsOk() {
+		assertTrue(testee.addition((-10), (-5)) == (-15));
 	}
 	
 	@Test
