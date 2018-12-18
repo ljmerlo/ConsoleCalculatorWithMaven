@@ -173,6 +173,11 @@ public class CalculatorTest {
 		assertTrue(testee.multiplicationTesting(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
 	}
 	
+	@Test
+	public void testProductTwoMinIsOk() {
+		assertTrue(testee.multiplicationTesting(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	
 	@Test(expected=NumberFormatException.class)
 	public void testProductPosAndStringIsOk() {
 		assertTrue(testee.multiplicationTesting(5, Integer.parseInt("n")) == 25);
