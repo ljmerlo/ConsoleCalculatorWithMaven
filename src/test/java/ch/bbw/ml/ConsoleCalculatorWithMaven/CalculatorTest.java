@@ -177,4 +177,9 @@ public class CalculatorTest {
 	public void testProductPosAndStringIsOk() {
 		assertTrue(testee.multiplicationTesting(5, Integer.parseInt("n")) == 25);
 	}
+	
+	@Test
+	public void testProductOnePosOneNegIsOk() {
+		assertTrue(testee.multiplicationTesting(5, (-5)) == (-25));
+	}
 }
