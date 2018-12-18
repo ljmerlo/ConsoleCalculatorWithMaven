@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: MMZcV+WEDLy6CYEYVU7JGnbkN76dhb6uKEcChHRrewTv7bBUpzpzFeaSGENt6odjGNTd47gEGyaQK15UuqXkp7TY/uAJMOoB2W0cIk9mvprdLiwZePgrY2HY8nvb3M/WB62RwkqgtXhAum7e6bwXrDTruf+BLtYy+PaALnx1xeMYxoEMnqKScgbvBF0uQZk3c/j4dAnqC1CaG7ILyFGnuhZrBVTgLizB3BE3VdmWgb66BE+DRSIjPHWT8hdp3gc/KG6BE5yPYwfqeEWu8yxrDaOZBHW/wbqnUCVl766qPS5byJ6EUODKjpQUjUi40MVKGMHyrSluGMz4DmhkOsKnaVLAktPuI6Ott3nbSs1wbErwxWWDoyKJPom37D0XKwONXQ0NVV5omxLlNyFinOmgSxln7iAWK4wFdb0Z1K+PdQMVJr2tkyrtzlQUSdQl1eLwLasxaXoBs9PBJWqWbyH6gONp1mSt1EsUNMOvonjurHgAKOlINVeBcC7GEpqAwNgo3USnGA63jyroh2HjwyBuyxtWzvdCuOdPexXlNCyfvuiUsj1KyAZpI+howSmD2GEDumdx8iciJZ7BiC3cydY+tQwR52tvY85o2HrZvEO0gQHXYWjM/ZRNXjQB1PlGHo8+JVlgix+6VzukSaCl1Mvx6I4CpifEJNIM7S0rQ/cLP7k=
+  file: "/home/travis/.m2/repository/ch/bbw/ml/20_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/20_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: ljmerlo/ConsoleCalculatorWithMaven
