@@ -162,4 +162,9 @@ public class CalculatorTest {
 	public void testProductPosMalZeroIsOk() {
 		assertTrue(testee.multiplicationTesting(5, 0) == 0);
 	}
+	
+	@Test
+	public void testProductZweiZeroIsOk() {
+		assertTrue(testee.multiplicationTesting(0, 0) == 0);
+	}
 }
