@@ -167,4 +167,9 @@ public class CalculatorTest {
 	public void testProductZweiZeroIsOk() {
 		assertTrue(testee.multiplicationTesting(0, 0) == 0);
 	}
+	
+	@Test
+	public void testProductTwoMaxIsOk() {
+		assertTrue(testee.multiplicationTesting(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
 }
