@@ -22,7 +22,7 @@ public class Calculator {
     private int multiplication(int multiplikand, int multiplikator) {
     	return multiplikand * multiplikator;
     }
-    int multiplicationTesting(int multiplikand, int multiplikator) {
+    public int multiplicationTesting(int multiplikand, int multiplikator) {
     	return multiplication(multiplikand, multiplikator);
     }
 }

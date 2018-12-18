@@ -24,5 +24,6 @@ public class App
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.addition(valueA, valueB));
         System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraction(valueA, valueB));
         System.out.println("Quotient " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
+        System.out.println("Product " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
     }
 }
