@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Test Class for Class Calculator
  * @author Lenny
- * @version 0.0.1
+ * @version 3.0.1
  */
 
 public class CalculatorTest {
@@ -186,5 +186,27 @@ public class CalculatorTest {
 	@Test
 	public void testProductOnePosOneNegIsOk() {
 		assertTrue(testee.multiplicationTesting(5, (-5)) == (-25));
+	}
+	
+	//Unexpected Exceptions
+	
+	@Test
+	public void testSumOneNotNormal() throws NumberFormatException {
+		assertTrue(testee.addition(5, 5) == 10);
+	}
+	
+	@Test
+	public void testDifOneNotNormal() throws NumberFormatException {
+		assertTrue(testee.subtraction(5, 5) == 0);
+	}
+	
+	@Test
+	public void testQuoOneNotNormal() throws NumberFormatException {
+		assertTrue(testee.division(5, 5) == 1);
+	}
+	
+	@Test
+	public void testProOneNotNormal() throws NumberFormatException {
+		assertTrue(testee.multiplicationTesting(5, 5) == 25);
 	}
 }
