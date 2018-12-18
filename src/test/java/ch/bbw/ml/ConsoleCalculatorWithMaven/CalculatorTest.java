@@ -145,4 +145,11 @@ public class CalculatorTest {
 	public void testQuotientPosByPosWithRoundingIsOk() {
 		assertTrue(testee.division(1, 2) == 0);
 	}
+	
+	//Multiplication
+	
+	@Test
+	public void testProductZweiPositiveIsOk() {
+		assertTrue(testee.multiplicationTesting(5, 5) == 25);
+	}
 }
