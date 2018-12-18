@@ -138,53 +138,11 @@ public class CalculatorTest {
 	
 	@Test(expected=NumberFormatException.class)
 	public void testQuotientMaxDivByStringIsOk() {
-		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 25);
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 178956970);
 	}
 	
 	@Test
 	public void testQuotientPosByPosWithRoundingIsOk() {
 		assertTrue(testee.division(1, 2) == 0);
-	}
-	
-	//Multiplication
-	
-	@Test
-	public void testProductZweiPositiveIsOk() {
-		assertTrue(testee.multiplicationTesting(5, 5) == 25);
-	}
-	
-	@Test
-	public void testProductZweiNegativeIsOk() {
-		assertTrue(testee.multiplicationTesting((-5), (-5)) == 25);
-	}
-	
-	@Test
-	public void testProductPosMalZeroIsOk() {
-		assertTrue(testee.multiplicationTesting(5, 0) == 0);
-	}
-	
-	@Test
-	public void testProductZweiZeroIsOk() {
-		assertTrue(testee.multiplicationTesting(0, 0) == 0);
-	}
-	
-	@Test
-	public void testProductTwoMaxIsOk() {
-		assertTrue(testee.multiplicationTesting(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
-	}
-	
-	@Test
-	public void testProductTwoMinIsOk() {
-		assertTrue(testee.multiplicationTesting(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
-	}
-	
-	@Test(expected=NumberFormatException.class)
-	public void testProductPosAndStringIsOk() {
-		assertTrue(testee.multiplicationTesting(5, Integer.parseInt("n")) == 25);
-	}
-	
-	@Test
-	public void testProductOnePosOneNegIsOk() {
-		assertTrue(testee.multiplicationTesting(5, (-5)) == (-25));
 	}
 }
