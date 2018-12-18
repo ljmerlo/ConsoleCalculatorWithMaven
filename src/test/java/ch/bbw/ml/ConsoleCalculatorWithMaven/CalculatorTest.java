@@ -152,4 +152,9 @@ public class CalculatorTest {
 	public void testProductZweiPositiveIsOk() {
 		assertTrue(testee.multiplicationTesting(5, 5) == 25);
 	}
+	
+	@Test
+	public void testProductZweiNegativeIsOk() {
+		assertTrue(testee.multiplicationTesting((-5), (-5)) == 25);
+	}
 }
