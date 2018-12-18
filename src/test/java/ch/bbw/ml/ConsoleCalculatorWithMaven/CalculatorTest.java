@@ -138,7 +138,7 @@ public class CalculatorTest {
 	
 	@Test(expected=NumberFormatException.class)
 	public void testQuotientMaxDivByStringIsOk() {
-		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 178956970);
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.parseInt("n")) == 25);
 	}
 	
 	@Test
@@ -171,5 +171,10 @@ public class CalculatorTest {
 	@Test
 	public void testProductTwoMaxIsOk() {
 		assertTrue(testee.multiplicationTesting(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
+	
+	@Test(expected=NumberFormatException.class)
+	public void testProductPosAndStringIsOk() {
+		assertTrue(testee.multiplicationTesting(5, Integer.parseInt("n")) == 25);
 	}
 }
