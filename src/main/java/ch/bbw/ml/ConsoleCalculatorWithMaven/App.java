@@ -12,7 +12,8 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Scanner scanner = new Scanner(System.in);
+    	@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
     	
         Calculator calculator = new Calculator();
         String what;
@@ -58,11 +59,11 @@ public class App
         }
         
         else if(what.equals("times")) {
-        	System.out.println("Quotient " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
+        	System.out.println("Product " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
         }
         
         else if(what.equals("through")) {
-        	System.out.println("Product " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
+        	System.out.println("Quotient " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
         }
         
         else {
